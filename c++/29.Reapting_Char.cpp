@@ -33,6 +33,27 @@ s consists of only uppercase English letters.
 0 <= k <= s.length
 */
 
+/* Approach
+Initialization:
+left pointer is initialized to 0.
+max_freq keeps track of the maximum frequency of any character in the current
+window. char_count is an unordered map to count the frequency of each character
+in the current window. max_length keeps track of the maximum length of the valid
+window found so far. Iterate with the right pointer: Update the count of the
+character at the right pointer in char_count. Update max_freq to be the maximum
+frequency of any character in the current window. Shrink the window if
+necessary: Check if the current window size minus max_freq < 𝑘. If so, it means
+we need more than k replacements to make all characters in the current window
+the same, so we shrink the window from the left. Update the count of the
+character at the left pointer and move the left pointer to the right. Update the
+maximum length: After adjusting the window, update max_length to be the maximum
+length of the valid window found so far.
+
+Complexity
+Time complexity:O(n)
+
+Space complexity:O(1)
+                   */
 class Solution {
 public:
   int characterReplacement(string s, int k) {
