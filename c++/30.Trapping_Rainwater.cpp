@@ -1,3 +1,4 @@
+// 07.08.2024
 /*
 42. Trapping Rain Water
 Given n non-negative integers representing an elevation map where the width of
@@ -21,7 +22,7 @@ Constraints:
 n == height.length
 1 <= n <= 2 * 10^4
 0 <= height[i] <= 10^5
-    */
+   */
 
 // soln->
 /*
